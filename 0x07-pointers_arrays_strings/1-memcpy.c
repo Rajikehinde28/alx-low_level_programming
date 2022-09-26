@@ -1,18 +1,19 @@
 #include "main.h"
 /**
- * _strchr - locates a character in a string,
- * @s: string.
- * @c: character.
- * Return: the pointer to the first occurrence of the character c.
+ * _memcpy - copies memory area
+ *
+ * @dest: starting pointer of the memory block
+ * @src: starting pointer of the source block
+ * @n: size of the memory block in bytes
+ *
+ * Return: a pointer to dest
  */
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0;
+	unsigned int i;
 
-	for (i = 0; *(s + i) != '\0'; i++)
-		if (*(s + i) == c)
-			return (s + i);
-	if (*(s + i) == c)
-		return (s + i);
-	return ('\0');
+	for (i = 0; i < n; i++)
+		*(dest + i) =  *(src + i);
+
+	return (dest);
 }
