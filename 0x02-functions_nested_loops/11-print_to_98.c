@@ -1,37 +1,19 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 /**
- * main - entry point
+ * print_to_98 - prints all natural nums from n to 98 separated by , ending
+ * with new line.
+ * @n: holds place of input integer
  *
- * Return 0
+ * Return: void
  */
-
 void print_to_98(int n)
-
 {
-
-if (n < 98)
-
-{
-
-	for (n = n; n < 98; n++)
-
-		printf("%d, ", n);
-
-		printf("%d\n", 98);
-
-}
-
+	if (n < 98)
+		for (; n < 98; n++)
+			printf("%d, ", n);
 	else
-
-{
-
-	for (n = n; n > 98; n--)
-
-		printf("%d, ", n);
-
-		printf("%d\n", 98);
-
-}
-
+		for (; n > 98; n--)
+			printf("%d, ", n);
+	printf("98\n");
 }
